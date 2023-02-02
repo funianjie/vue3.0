@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve:dev": "cross-env PROJECT_NAME=default vue-cli-service serve --mode development",
+    "serve:test": "cross-env PROJECT_NAME=default vue-cli-service serve --mode test",
+    "serve:prod": "cross-env PROJECT_NAME=default vue-cli-service serve --mode production",
+    "build:dev": "cross-env PROJECT_NAME=default vue-cli-service build --mode development",
+    "build:test": "cross-env PROJECT_NAME=default vue-cli-service build --mode test",
+    "build:prod": "cross-env PROJECT_NAME=default vue-cli-service build --mode production"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -19,7 +23,8 @@
     "@vue/cli-service": "~4.5.15",
     "@vue/compiler-sfc": "^3.0.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "cross-env": "^7.0.3"
   },
   "browserslist": [
     "> 1%",
